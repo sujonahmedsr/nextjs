@@ -30,7 +30,7 @@ const NavbarPage = () => {
                                 className={`hover:text-blue-600`}
                                 href={item?.link}
                             >
-                                {item?.title}
+                                {item?.title }
                             </Link>)
                         }
                     </div>
