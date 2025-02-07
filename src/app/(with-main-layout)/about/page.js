@@ -1,4 +1,7 @@
-import React from 'react';
+export const metadata = {
+  title: "About Page",
+  description: "This is the project gallery system."
+}
 
 const AboutPage = () => {
   return (
