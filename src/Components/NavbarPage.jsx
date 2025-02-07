@@ -1,14 +1,17 @@
+"use client"
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const NavbarPage = () => {
+    
     const navItems = [
         {
             title: 'Home',
             link: '/'
         },
         {
-            title: 'All Products',
-            link: '/products'
+            title: 'Gallery',
+            link: '/gallary'
         },
         {
             title: 'About Us',
