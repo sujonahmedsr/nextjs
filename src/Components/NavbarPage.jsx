@@ -1,9 +1,9 @@
 "use client"
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const NavbarPage = () => {
-    
+    const pathname = usePathname()
     const navItems = [
         {
             title: 'Home',
@@ -12,6 +12,10 @@ const NavbarPage = () => {
         {
             title: 'Gallery',
             link: '/gallary'
+        },
+        {
+            title: 'Blogs',
+            link: '/blogs'
         },
         {
             title: 'About Us',
@@ -30,7 +34,7 @@ const NavbarPage = () => {
                         {
                             navItems.map((item, index) => <Link
                                 key={index + 1}
-                                className={`hover:text-blue-600`}
+                                className={` ${pathname === item.link && 'text-blue-700 font-semibold'}`}
                                 href={item?.link}
                             >
                                 {item?.title }
