@@ -1,8 +1,13 @@
+export const metadata = {
+    title: "Blogs page",
+    desciption: "create blogs page."
+}
 
 const page = async () => {
-    const res = await fetch('https://jsonplaceholder.typicode.com/users')
+    const res = await fetch('https://jsonplaceholder.typicode.com/users', {
+        cache: "force-cache"
+    })
     const users = await res.json()
-    console.log(users);
 
     return (
         <div className="container mx-auto grid grid-cols-4 gap-6 p-5">
