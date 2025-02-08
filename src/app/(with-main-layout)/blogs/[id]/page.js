@@ -1,7 +1,12 @@
 // app/users/[id]/page.tsx
 
+export const metadata = {
+    title: "Details Blogs page",
+    desciption: "create Details blogs page."
+}
+
 const UserDetailsPage = async ({ params }) => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${params?.id}`);
     const user = await res.json();
 
     if (!user.id) {
