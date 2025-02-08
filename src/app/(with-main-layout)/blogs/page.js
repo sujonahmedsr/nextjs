@@ -17,6 +17,7 @@ const page = async () => {
                     <p>Email: {user?.email}</p>
                     <p>Phone: {user?.phone}</p>
                     <p>Website: {user?.website}</p>
+                    <button></button>
                 </div>)
             }
         </div>
