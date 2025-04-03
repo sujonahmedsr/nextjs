@@ -25,9 +25,13 @@ const NavbarPage = () => {
             title: 'Contact Us',
             link: '/contact'
         },
+        {
+            title: 'Make Pdf',
+            link: '/pdf'
+        },
     ]
     return (
-        <section className="p-4 border-b bg-white sticky top-0 z-10 transition-all">
+        <section className="p-4 border-b sticky top-0 z-10 transition-all">
             <div className="container mx-auto">
                 <nav className="hidden justify-between items-center lg:flex">
                     <div className="flex items-center gap-5">
