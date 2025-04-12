@@ -31,7 +31,7 @@ const NavbarPage = () => {
         },
     ]
     return (
-        <section className="p-4 border-b sticky top-0 z-10 transition-all">
+        <section className="p-4 border-b sticky top-0 z-10 transition-all bg-white">
             <div className="container mx-auto">
                 <nav className="hidden justify-between items-center lg:flex">
                     <div className="flex items-center gap-5">
@@ -41,7 +41,7 @@ const NavbarPage = () => {
                                 className={` ${pathname === item.link && 'text-blue-700 font-semibold'}`}
                                 href={item?.link}
                             >
-                                {item?.title }
+                                {item?.title}
                             </Link>)
                         }
                     </div>
