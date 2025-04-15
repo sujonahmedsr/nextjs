@@ -29,6 +29,10 @@ const NavbarPage = () => {
             title: 'Make Pdf',
             link: '/pdf'
         },
+        {
+            title: 'Write Blog',
+            link: '/wrtieBlog'
+        }
     ]
     return (
         <section className="p-4 border-b sticky top-0 z-10 transition-all bg-white">
