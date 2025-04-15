@@ -32,8 +32,8 @@ import {
     FaCode
 } from 'react-icons/fa'
 
-const Tiptap = () => {
-    const [html, setHtml] = useState('') 
+const Tiptap = ({handleGetValue}) => {
+    const [html, setHtml] = useState('')
 
     const editor = useEditor({
         extensions: [
@@ -65,6 +65,7 @@ const Tiptap = () => {
         },
         onUpdate({ editor }) {
             setHtml(editor.getHTML())
+            handleGetValue && handleGetValue(html)
         },
     })
 
@@ -76,7 +77,7 @@ const Tiptap = () => {
     }
 
     return (
-        <div className="grid grid-cols-2 items-start gap-5 mt-6 p-4 border rounded shadow-sm bg-white">
+        <div className="max-w-4xl mx-auto items-start gap-5 mt-6 p-4 border rounded shadow-sm bg-white">
             <div>
                 {/* Toolbar */}
                 <div className="flex flex-wrap gap-4 pb-2">
@@ -128,12 +129,12 @@ const Tiptap = () => {
 
                 {/* Editor */}
                 <EditorContent editor={editor} className="border rounded p-2 min-h-[200px] [&_img]:w-full [&_img]:h-[400px]" />
-            </div>
 
-            {/* Preview */}
-            <div>
-                <h3 className="text-lg font-semibold pb-1">Live Preview</h3>
-                <div className="border bg-gray-50 rounded p-4 prose max-w-none [&_img]:w-full [&_img]:h-[400px]" dangerouslySetInnerHTML={{ __html: html }} />
+                {/* Preview */}
+                {/* <div>
+                    <h3 className="text-lg font-semibold pb-1">Live Preview</h3>
+                    <div className="border bg-gray-50 rounded p-4 prose max-w-none [&_img]:w-full [&_img]:h-[400px]" dangerouslySetInnerHTML={{ __html: html }} />
+                </div> */}
             </div>
         </div>
     )
